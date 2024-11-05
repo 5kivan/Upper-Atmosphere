@@ -20,7 +20,7 @@ import glob
 import peakutils
 
 column_names = pd.read_csv('column_names.txt',sep='	', float_precision='high')
-data_whole = pd.read_csv('20140807165108.txt',sep='	', float_precision='high')
+data_whole = pd.read_csv('20141013040046.txt',sep='	', float_precision='high')
 data_whole.columns=column_names.columns
 data=pd.concat([data_whole.iloc[:,0:6], data_whole.iloc[:,7:262].sum(axis=1)], axis=1)
 data=pd.concat([data, data_whole.iloc[:,519:531]], axis=1)
